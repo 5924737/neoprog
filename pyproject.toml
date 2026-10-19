@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ch341a-tool"
+version = "0.1.0"
+description = "CH341A SPI flash programmer GUI (pyusb + Flet)"
+requires-python = ">=3.9"
+dependencies = [
+    "pyusb>=1.3.1",
+    "flet>=0.80.0",
+]
+
+[project.scripts]
+ch341a-tool = "ch341a.app:run"
+
+[tool.setuptools]
+packages = ["ch341a"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
